@@ -1,0 +1,20 @@
+{
+  "name": "react-curso-iniciacion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnroPrograming/React-curso-iniciacion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UnroPrograming/React-curso-iniciacion/issues"
+  },
+  "homepage": "https://github.com/UnroPrograming/React-curso-iniciacion#readme"
+}

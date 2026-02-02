@@ -8,7 +8,7 @@ export function App () {
     return (
         <div className='App'>
             {/*Al componente de TwitterFollowCard le pasamos sus propiedades*/}
-            <TwitterFollowCard formatUserName={formatUserName} userName="CarlitosElDelBombo" isFollowing>
+            <TwitterFollowCard formatUserName={formatUserName} userName="Carlitos17" isFollowing>
                 {/* Esta es la propiedad con el nombre reservado children */}
                 Carlos Javier Gutierrez
             </TwitterFollowCard>

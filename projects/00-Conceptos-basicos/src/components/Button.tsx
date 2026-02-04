@@ -1,20 +1,22 @@
-import { useState } from "react";
-
 type Props = {
   children: string;
+  isLoading: boolean;
+  onClick: () => void;
 };
 
-function Button({ children }: Props) {
-    const [buttonState, setbuttonState]= useState('primary');
-    const [buttonContent, setbuttonContent]= useState(children)
-
-    const handleClick = () => {
-        setbuttonContent('Cargando...');
-        setbuttonState('secondary');
-    };  
+function Button({ children , isLoading, onClick}: Props) {
+    
 
     return (
-        <button onClick={handleClick} type="button" className= {`btn btn-${buttonState}`}>{buttonContent}</button>
+        <button 
+            onClick={onClick} 
+            disabled= {isLoading} 
+            type="button" 
+            className= {`btn btn-${isLoading ? "secondary" : "primary"}`}>
+                {isLoading 
+                    ? "Loading..." 
+                    : children}
+            </button>
     );
 };
 

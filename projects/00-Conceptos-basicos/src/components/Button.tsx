@@ -1,6 +1,6 @@
 type Props = {
   children: string;
-  isLoading: boolean;
+  isLoading?: boolean;
   onClick: () => void;
 };
 
@@ -10,7 +10,7 @@ function Button({ children , isLoading, onClick}: Props) {
     return (
         <button 
             onClick={onClick} 
-            disabled= {isLoading} 
+            disabled= {isLoading}
             type="button" 
             className= {`btn btn-${isLoading ? "secondary" : "primary"}`}>
                 {isLoading 

@@ -12,8 +12,7 @@ type Props = {
 function ListState({ data, onSelect}: Props) {
   
   //Utilizamos un estado para avisar a react que esa variable va a cambiar y que tiene que actualizar la UI 
-  // (por defecto el valor será 1)
-  const [indexSelected, setIndexSelected]= useState(1);
+  const [indexSelected, setIndexSelected]= useState();
 
   //Al pulsar un elemento de la lista -> el indexSeleced pasa a ser ese elemento
   const handleClick = (i: number, element: string) => {
@@ -26,7 +25,7 @@ function ListState({ data, onSelect}: Props) {
       {data.map((element, i) => (
         <li
           onClick={() => handleClick(i, element)}
-          key={element}
+          key={i}
           //Cuando seleccionamos un elemento de la lista este pasa a tener la propiedad de boostrap active
           className={`list-group-item ${indexSelected == i ? 'active' : ''}`}
         >

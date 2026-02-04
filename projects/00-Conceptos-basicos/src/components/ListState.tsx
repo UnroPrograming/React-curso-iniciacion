@@ -12,7 +12,7 @@ type Props = {
 function ListState({ data, onSelect}: Props) {
   
   //Utilizamos un estado para avisar a react que esa variable va a cambiar y que tiene que actualizar la UI 
-  const [indexSelected, setIndexSelected]= useState();
+  const [indexSelected, setIndexSelected]= useState<number>();
 
   //Al pulsar un elemento de la lista -> el indexSeleced pasa a ser ese elemento
   const handleClick = (i: number, element: string) => {
